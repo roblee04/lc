@@ -5,6 +5,22 @@
         From each cell, you can either move in four directions: left, right, up, or down. You may not move diagonally or move outside the boundary (i.e., wrap-around is not allowed).
     # 2. Look at the examples they give you for what the algorithm should do. "Solution(input) -> output". Come up with 1 or 2 examples on your own, and write them down.
 
+        def dfs(i, j, prevMax):
+            #check bounds
+            if i < 0 or i >= n or j < 0 or j >= m:
+                return 0
+            
+            if board[i][j] <= prevMax:
+                return 0
+
+            # try a direction
+            left = dfs(i, j - 1, board[i][j])
+            right = dfs(i, j + 1, board[i][j])
+            up = dfs(i - 1, j, board[i][j])
+            down = dfs(i, j + 1, board[i][j])
+
+            return 1 + max(left, right, up, down)
+
     # 3. Think out loud, and write down (!!) the possible high-level approaches to solving the problem. 
     #     Eg: "this two-sum problem can be brute-forced in O(n^2) time using two for-loops, or it can be solved in O(n) using a hashmap." 
     #     This doesn't have to be detailed, just a possible approach. Think about possible edge cases and how they could break the solution.

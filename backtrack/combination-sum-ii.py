@@ -22,7 +22,7 @@
         3. use a similar mindset to subset sum 2, only one branch can have that duplicate number
     # 4. Pick one of the approaches, and write out the pseudo code for it, while taking out loud as to what your thought process is.
 
-        andidates.sort()
+        candidates.sort()
         res = []
 
         def dfs(idx, lst):
