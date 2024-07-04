@@ -8,7 +8,7 @@
 
 #     Here, if you are completely blanking after 5 minutes, and can't even do a brute-force solution, then do what the OP said 
 #     - abort mission, and spend the next hour understanding the problem by looking at the solution. Once you understood the solution go to step 4.
-lt = ListNode()
+
 # 4. Pick one of the approaches, and write out the pseudo code for it, while taking out loud as to what your thought process is.
 
 # 5. CODE THE ACTUAL SOLUTION. If you actually followed steps 1-4, this part is going to be trivial. You will bang out the actual code often in under 5 minutes. 
